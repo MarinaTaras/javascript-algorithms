@@ -13,8 +13,8 @@ function anagram(str1, str2) {
     return false
   }
 
-  let word1 = str1.toLowerCase().split('').sort().join('')
-  let word2 = str2.toLowerCase().split('').sort().join('')
+  const word1 = str1.toLowerCase().split('').sort().join('')
+  const word2 = str2.toLowerCase().split('').sort().join('')
 
   if (word1 === word2) {
     return true

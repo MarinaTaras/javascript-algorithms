@@ -9,12 +9,12 @@
  */
 
 function sumOfTwo(arr, sum) {
-  let length = arr.length
+  const length = arr.length
 
   let res = false
 
   for (i = 0; i <= length; i++) {
-    let el = arr.shift()
+    const el = arr.shift()
 
     if (arr.includes(sum - el)) {
       res = true

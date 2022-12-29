@@ -10,7 +10,7 @@ function countZeros(n) {
   let num = 0
   if (n == 0) return 0
 
-  for (let i = 10; i <= n; i = i + 10) {
+  for (let i = 10; i <= n; i++) {
     i.toString()
       .split('')
       .forEach((d) => {

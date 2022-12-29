@@ -7,24 +7,21 @@
  */
 
 function isPrime(n) {
-  if (n == 0) {
-    return false
-  }
-  else {
-    if (n == 1) {
-      return false
-    }
-  }
-  for (let i = 2; i <= n; i++) {
-    if ((n%i == 0) && (i !== n)) {
-      return false
-    }
-    else return true
-  }
+  if (n < 2) return false
+
+  let result = true
+
+  const div = [2, 3, 5, 7]
+
+  div.forEach(div => {
+    if (n % div === 0 && n !== div) result = false
+  })
+
+  return result
 }
 
 function primes(num) {
-  let mass = []
+  const mass = []
   for (let i = 2; i <= num; i++) {
     if (isPrime(i)) {
       mass.push(i)

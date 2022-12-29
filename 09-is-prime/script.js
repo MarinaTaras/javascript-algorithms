@@ -9,27 +9,25 @@
  * если n простое, и false — если нет.
  */
 
+
 function isPrime(n) {
-  if (n == 0) {
-    return false
-  }
-  else {
-    if (n == 1) {
-      return false
-    }
-  }
-  for (let i = 2; i <= n; i++) {
-    if ((n % i === 0) && (i !== n)) {
-      return false
-    }
-    else return true
-  }
+  if (n < 2) return false
+
+  let result = true
+
+  const div = [2, 3, 5, 7]
+
+  div.forEach(div => {
+    if (n % div === 0 && n !== div) result = false
+  })
+
+  return result
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(isPrime(15)) // false
-console.log(isPrime(1)) // false
-console.log(isPrime(3)) // true
-console.log(isPrime(6)) // false
-console.log(isPrime(17)) // true
+// console.log(isPrime(1)) // false
+// console.log(isPrime(3)) // true
+// console.log(isPrime(6)) // false
+// console.log(isPrime(17)) // true

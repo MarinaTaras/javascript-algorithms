@@ -7,7 +7,7 @@
 */
 
 function capitalize(str) {
-  let res = str.trim()
+  const res = str.trim()
   if (!res) return ''
   return res.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
 }
