@@ -7,9 +7,11 @@
 */
 
 function capitalize(str) {
+  
   const res = str.trim()
   if (!res) return ''
-  return res.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+
+  return res.split(" ").filter(t => t!='').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
